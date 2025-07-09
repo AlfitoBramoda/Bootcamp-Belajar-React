@@ -1,12 +1,52 @@
-# React + Vite
+# Bootcamp Belajar React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Sebuah Repository yang digunakan ketika belajar React saat Bootcamp
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Home Page** - Welcome page with introduction
+- **Blog Posts** - Browse and read blog posts
+- **Post Details** - Individual post pages with full content
+- **Navigation** - Active page highlighting and smooth navigation
+- **Error Handling** - 404 pages and post not found handling
+- **Browser History** - Full browser back/forward support
+- **Context State Management** - State Management Using Context (from App can to child anywhere)
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **React 19** - Frontend framework
+- **React Router 7** - Client-side routing
+- **Tailwind CSS 4** - Styling and responsive design
+- **Vite** - Build tool and development server
+- **Context API** - State management
+
+## 📦 Installation
+
+1. **Clone repository ini**
+    ```bash
+    git clone https://github.com/AlfitoBramoda/Bootcamp-Belajar-React.git
+    cd bootcamp-belajar-react
+    ```
+
+2. **Install Dependency**
+    ```bash
+    npm install
+    ```
+
+    atau jika anda menggunakan package manager lain:
+    ```bash
+    # yarn
+    yarn install
+
+    #pnpm
+    pnpm install
+    ```
+
+## 🏃‍♂️ Menjalankan Aplikasi
+
+1. Jalankan Server
+    ```bash
+    npm run dev
+    ```
+
+2. Buka Browser anda dan kunjungi `https://localhost:5173` (atau alamat yang muncul di terminal anda)

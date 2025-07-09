@@ -12,7 +12,7 @@ function HomePage() {
                         Nih Artikel Keren yang Kami Buat
                     </p>
                     <Link 
-                        to="/posts"
+                        to="/dashboard"
                         className="inline-block bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition font-medium"
                     >
                         Read Our Posts

@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router';
+import useMessage from '../../contexts/MessageContext';
 
 const Header = () => {
     const location = useLocation()
+    const {author} = useMessage()
 
     const isActive = (path) => {
         if(path === '/') {
@@ -13,7 +15,7 @@ const Header = () => {
     return (
         <header className="fixed top-0 left-0 w-full bg-white shadow-md z-10">
             <div className="container mx-auto flex justify-between items-center p-4">
-                <Link to="/" className="text-xl font-bold text-gray-800">Kelompok 5</Link>
+                <Link to="/" className="text-xl font-bold text-gray-800">{author}</Link>
                 <div className="flex space-x-6">
                     <Link 
                         to="/about" 
@@ -35,7 +37,7 @@ const Header = () => {
                     >
                         Dashboard
                     </Link>
-                    <Link 
+                    {/* <Link 
                         to="/login" 
                         className={`font-medium ${
                             isActive('/login') 
@@ -44,7 +46,7 @@ const Header = () => {
                         }`}
                     >
                         Login
-                    </Link>
+                    </Link> */}
                 </div>
             </div>
         </header>

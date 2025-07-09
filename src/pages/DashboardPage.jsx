@@ -1,28 +1,13 @@
-import { useState, useEffect } from 'react'
 import PostList from '../components/PostList'
 import Header from '../components/layout/Header'
+import useFetch from '../hooks/useFetch'
 
 function DashboardPage() {
-    const [posts, setPosts] = useState([])
-    const [loading, setLoading] = useState(true)
+    const {data: article, loading, error} = useFetch('https://686cbde314219674dcc8f1a9.mockapi.io/Post/Articles')
 
-    useEffect(() => {
-        // Simulasi fetch data atau gunakan API real
-        const fetchPosts = async () => {
-            try {
-                // Contoh dengan JSONPlaceholder API
-                const response = await fetch('https://686cbde314219674dcc8f1a9.mockapi.io/Post/Articles')
-                const data = await response.json()
-                setPosts(data) // Ambil 10 post pertama
-                setLoading(false)
-            } catch (error) {
-                console.error('Error fetching posts:', error)
-                setLoading(false)
-            }
-        }
-
-        fetchPosts()
-    }, [])
+    if(error){
+        alert("Lagi Error Bos")
+    }
 
     return (
         <div className="min-h-screen bg-gray-50">
@@ -33,7 +18,7 @@ function DashboardPage() {
                     {loading ? (
                         <div className="text-center py-8">Loading...</div>
                     ) : (
-                        <PostList posts={posts} />
+                        <PostList posts={article} />
                     )}
                 </div>
             </div>
