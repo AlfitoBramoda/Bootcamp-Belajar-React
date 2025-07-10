@@ -8,6 +8,7 @@ import PostDetails from './pages/PostDetailsPage'
 import NotFoundPage from './pages/NotFoundPage'
 import AppProviders from './providers/AppProviders'
 import ProtectedRoute from './components/ProtectedRoute'
+import NoteTaking from './pages/NoteTaking'
 
 function App() {
 
@@ -31,6 +32,7 @@ function App() {
           }/>
           <Route path='/dashboard/*' element={<NotFoundPage/>} />
           <Route path='*' element={<NotFoundPage/>} />
+          <Route path='/note' element={<NoteTaking/>}/>
         </Routes>
       </main>
     </AppProviders>

@@ -25,6 +25,16 @@ const Header = () => {
                 {user ? `Hai ${user.name}` : `Hello, Login Dulu ya`}</Link>
                 <div className="flex space-x-6">
                     <Link 
+                        to="/note" 
+                        className={`font-medium ${
+                            isActive('/note') 
+                                ? 'text-blue-600 border-b-2 border-blue-600' 
+                                : 'text-gray-600 hover:text-blue-500'
+                        }`}
+                    >
+                        Note
+                    </Link>
+                    <Link 
                         to="/about" 
                         className={`font-medium ${
                             isActive('/about') 
