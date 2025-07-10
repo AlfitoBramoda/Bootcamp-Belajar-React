@@ -23,12 +23,12 @@ function App() {
             <ProtectedRoute>
               <DashboardPage/>
             </ProtectedRoute>
-          } />
+          }/>
           <Route path='/dashboard/:id' element={
             <ProtectedRoute>
               <PostDetails/>
             </ProtectedRoute>
-          } />
+          }/>
           <Route path='/dashboard/*' element={<NotFoundPage/>} />
           <Route path='*' element={<NotFoundPage/>} />
         </Routes>

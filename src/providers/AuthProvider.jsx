@@ -1,10 +1,23 @@
-import React, { useState, createContext } from 'react';
+import React, { useState, createContext, useEffect } from 'react';
 
 const AuthContext = createContext();
 
 function AuthProvider({children}) {
     const [user, setUser] = useState(null)
     const isAuthenticated = user !== null
+
+    useEffect(() => {
+        const savedUser = localStorage.getItem('user')
+        if (savedUser) {
+            try {
+                const parsedUser = JSON.parse(savedUser)
+                setUser(parsedUser)
+            } catch (error) {
+                console.error('Error parsing saved user:', error)
+                localStorage.removeItem('user')
+            }
+        }
+    }, [])
 
     const Login = async (username, password) => {
         try {
@@ -21,15 +34,13 @@ function AuthProvider({children}) {
                     id: users.id,
                     username: users.username,
                     name: users.name,
-                    role: users.role
+                    role: users.role,
+                    isAuthenticated: true
                 }
                 setUser(userObj)
-                console.log("Berhasil")
                 localStorage.setItem('user', JSON.stringify(userObj))
-
                 return true
             }
-            console.log("Gagal");
             return false
         } catch (error) {
             console.error('Login error:', error)
