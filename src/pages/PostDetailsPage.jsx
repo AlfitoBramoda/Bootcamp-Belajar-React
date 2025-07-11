@@ -11,7 +11,7 @@ function PostDetails() {
     useEffect(() => {
         const fetchPost = async () => {
             try {
-                const response = await fetch(`https://686cbde314219674dcc8f1a9.mockapi.io/Post/Articles/${id}`)
+                const response = await fetch(`https://686cbde314219674dcc8f1a9.mockapi.io/bank/Article/${id}`)
                 const data = await response.json()
                 setPost(data)
                 setLoading(false)

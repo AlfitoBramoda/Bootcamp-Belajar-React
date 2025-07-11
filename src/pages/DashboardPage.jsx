@@ -5,7 +5,7 @@ import Pagination from '../components/Pagination'
 import useFetch from '../hooks/useFetch'
 
 function DashboardPage() {
-    const {data: article, loading, error} = useFetch('https://686cbde314219674dcc8f1a9.mockapi.io/Post/Articles')
+    const {data: article, loading, error} = useFetch('https://686cbde314219674dcc8f1a9.mockapi.io/bank/Article')
     const [currentPage, setCurrentPage] = useState(1)
     const [postsPerPage] = useState(6) // 6 posts per halaman
 

@@ -30,7 +30,6 @@ function App() {
               <PostDetails/>
             </ProtectedRoute>
           }/>
-          <Route path='/dashboard/*' element={<NotFoundPage/>} />
           <Route path='*' element={<NotFoundPage/>} />
           <Route path='/note' element={<NoteTaking/>}/>
         </Routes>
